@@ -2,13 +2,10 @@ FROM python:3-alpine
 
 WORKDIR /app
 
-COPY ./accounts_service accounts_service
-COPY ./requirements.txt requirements.txt
+ADD ./requirements.txt requirements.txt
+ADD ./accounts_service accounts_service
 
-RUN pip install --no-cache-dir -r /app/requirements.txt && \
-    pip install --no-cache-dir gunicorn && \
-    PYTHONPATH=. python accounts_service/manage.py init
+RUN pip install --no-cache-dir -q -r /app/requirements.txt
+RUN PYTHONPATH=. python accounts_service/manage.py init
 
-EXPOSE 5000
-
-ENTRYPOINT [ "gunicorn", "--bind", "0.0.0.0:5000", "accounts_service.wsgi:app" ]
+CMD gunicorn --bind 0.0.0.0:$PORT accounts_service.wsgi:app

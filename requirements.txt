@@ -4,3 +4,4 @@ flask-migrate
 flask-sqlalchemy
 sqlalchemy-utils
 python-dotenv
+gunicorn

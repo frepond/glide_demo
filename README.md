@@ -54,7 +54,7 @@ docker build -t glide_demo .
 The just run:
 
 ```bash
-docker run -p 5000:5000 glide_demo
+docker run -e PORT=5000 -p 5000:5000 glide_demo
 ```
 
 __Warning__: you need docker installed. The database is not persisted.

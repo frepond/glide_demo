@@ -1,7 +1,5 @@
 # Glide Demo
 
-# accounts_service
-
 Basic account service for Glide demo.
 
 This project was created using `cookiecutter` template ()[https://github.com/karec/cookiecutter-flask-restful] and slightly modified to fit the needs of the demo.

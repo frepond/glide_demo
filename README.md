@@ -63,7 +63,7 @@ __Warning__: you need docker installed. The database is not persisted.
 
 - I started with boilerplate code after reviewing a few cookiecutter templates I stick with this, because I found it, well structured and simple enough for the challenge. I modidified it a bit to suit my needs:
   - Moved from flask-restful to flask-restplus in order to have API documentation for free (and API shoud be properly documented).
-  - Separated api endpoints from business logic. Not extrictly necesary but useful if I plan to use the bussiness logic not only via the API (rare in microservices architeture though).
+  - Separated api endpoints from business logic. Not strictly necessary but useful if I plan to use the business logic not only via the API (rare in microservices architecture though).
   - Minor cosmetic and style changes.
 - Even when the front end should have email validation (in order to provide early feedback to the user) the service layer must validate because UI could be one of the many API clients.
 - The demo uses Sqlite3 which is suitable for testing, given that we're using an ORM like SQLAchemy moving to Postgres should be trivial in this case (no complicated queries, no stored procedures, etc.)

@@ -1,8 +1,8 @@
-from flask import Flask, Blueprint
+from flask import Blueprint, Flask
 
-from accounts_service.extensions import db, migrate
-from accounts_service.api.restplus import api
 from accounts_service.api.endpoints.accounts import ns as accounts_ns
+from accounts_service.api.restplus import api
+from accounts_service.extensions import db, migrate
 
 
 def create_app(config=None, testing=False, cli=False):

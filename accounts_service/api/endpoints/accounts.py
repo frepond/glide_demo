@@ -1,5 +1,3 @@
-import logging
-
 from flask import jsonify, request
 from flask_restplus import Resource
 
@@ -9,8 +7,6 @@ from accounts_service.bussiness.accounts import (create_account,
 from accounts_service.api.serializers.accounts import account
 from accounts_service.api.restplus import api
 from accounts_service.models.accounts import Account
-
-log = logging.getLogger(__name__)
 
 ns = api.namespace('accounts', description='Accounts API')
 

@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-04-11T19:10:12.946Z",
+	"__export_date": "2019-04-11T21:04:03.575Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
@@ -131,7 +131,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1543013180327,
 			"method": "GET",
-			"modified": 1555006863014,
+			"modified": 1555013311028,
 			"name": "Fetch Account",
 			"parameters": [],
 			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
@@ -165,6 +165,29 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "{% response 'header', 'req_3eae89dc293747df8543c41f08361685', 'Location' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c6e756ef6db64f87afcbf29b7adc34dd",
+			"authentication": {},
+			"body": {},
+			"created": 1555013499498,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1534021827528.25,
+			"method": "GET",
+			"modified": 1555013522937,
+			"name": "Fetch Invalid Account",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:5000/api/v1/accounts/9999",
 			"_type": "request"
 		}
 	]

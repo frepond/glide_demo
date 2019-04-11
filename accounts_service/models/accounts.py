@@ -5,16 +5,15 @@ from sqlalchemy.orm import validates
 
 
 class Account(db.Model):
-    """Basic user model
-    """
+    __tablename__ = 'accounts'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(EmailType, nullable=False)
 
-    def __init__(self, **kwargs):
-        super(Account, self).__init__(**kwargs)
+    def __init__(self, email):
+        self.email = email
 
     def __repr__(self):
-        return "<Account %s>" % self.email
+        return '<Account %r>' % self.email
 
     @validates('email')
     def validate_email(self, key, email):

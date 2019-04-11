@@ -1,18 +1,18 @@
 import json
-import pytest
 
-from accounts_service.models import Account
+import pytest
 from accounts_service.app import create_app
 from accounts_service.extensions import db as _db
+from accounts_service.models import Account
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def app():
     app = create_app(testing=True)
     return app
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def db(app):
     _db.app = app
 

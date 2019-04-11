@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, Blueprint
 
-from accounts_service import api
 from accounts_service.extensions import db, migrate
-from flask import abort
+from accounts_service.api.restplus import api
+from accounts_service.api.endpoints.accounts import ns as accounts_ns
 
 
 def create_app(config=None, testing=False, cli=False):
@@ -13,7 +13,6 @@ def create_app(config=None, testing=False, cli=False):
     configure_app(app, testing)
     configure_extensions(app, cli)
     register_blueprints(app)
-    register_error_handlers(app)
 
     return app
 
@@ -44,12 +43,7 @@ def configure_extensions(app, cli):
 def register_blueprints(app):
     """register all blueprints for application
     """
-    app.register_blueprint(api.views.blueprint)
-
-
-def register_error_handlers(app):
-    app.register_error_handler(AssertionError, handle_assert)
-
-
-def handle_assert(excep):
-    abort(400, str(excep))
+    blueprint = Blueprint('api', __name__, url_prefix='/api/v1')
+    api.init_app(blueprint)
+    api.add_namespace(accounts_ns)
+    app.register_blueprint(blueprint)

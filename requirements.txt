@@ -1,8 +1,6 @@
 flask
-flask-restful
+flask_restplus
 flask-migrate
 flask-sqlalchemy
-flask-marshmallow
 sqlalchemy-utils
-marshmallow-sqlalchemy
 python-dotenv

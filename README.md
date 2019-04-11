@@ -75,6 +75,6 @@ __Warning__: you need docker installed. The database is not persisted.
 - Logging
 - Audit trail
 - As always better and more tests! (only basic tests at at rest api level)
-- Improve swagger doc (better comments, remove `id` form post/put)
+- Swagger or API Blueprint documentation.
 - Schema migration handling
 - ...

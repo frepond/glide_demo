@@ -1,0 +1,171 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-04-11T19:10:12.946Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"created": 1555001610318,
+			"description": "",
+			"modified": 1555001610318,
+			"name": "Glide",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_53d5bfab13fd41bdb4871c58b7b8ad30",
+			"color": null,
+			"created": 1555001610386,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1555001610386,
+			"modified": 1555001610386,
+			"name": "New Environment",
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_3f92652d56cb4be5bff19be5a4d7c2af",
+			"cookies": [],
+			"created": 1555001610390,
+			"modified": 1555001610390,
+			"name": "Default Jar",
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_4f0c498489754e0287bf0d700afeed3a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"bad_email\"\n}"
+			},
+			"created": 1555001650792,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e40ab4460e924d5aa2343e50d5997df3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555001650792,
+			"method": "POST",
+			"modified": 1555009332092,
+			"name": "Create Invalid Account",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:5000/api/v1/accounts",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3eae89dc293747df8543c41f08361685",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"frepond@gmail.com\"\n}"
+			},
+			"created": 1555001759237,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e40ab4460e924d5aa2343e50d5997df3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1543013180377,
+			"method": "POST",
+			"modified": 1555009335754,
+			"name": "Create Account",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:5000/api/v1/accounts",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f23ff6f4c1b544dd835e82b75ff23d79",
+			"authentication": {},
+			"body": {},
+			"created": 1555002992927,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1555002992927,
+			"method": "GET",
+			"modified": 1555007291355,
+			"name": "List Accounts",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:5000/api/v1/accounts",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5e8a810b7fad4254af6449621bd3bbf8",
+			"authentication": {},
+			"body": {},
+			"created": 1555006727336,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1543013180327,
+			"method": "GET",
+			"modified": 1555006863014,
+			"name": "Fetch Account",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'header', 'req_3eae89dc293747df8543c41f08361685', 'Location' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_45e127de2cf641f4bbbfef226c3d51c8",
+			"authentication": {},
+			"body": {},
+			"created": 1555006844345,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1525030474729.5,
+			"method": "DELETE",
+			"modified": 1555006878543,
+			"name": "Remove Account",
+			"parameters": [],
+			"parentId": "wrk_9bbe29a83f1a41178801daf62db44a8b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'header', 'req_3eae89dc293747df8543c41f08361685', 'Location' %}",
+			"_type": "request"
+		}
+	]
+}

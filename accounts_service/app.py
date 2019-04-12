@@ -3,6 +3,7 @@ from flask import Blueprint, Flask
 from accounts_service.api.endpoints.accounts import ns as accounts_ns
 from accounts_service.api.restplus import api
 from accounts_service.extensions import db, migrate
+from flask_cors import CORS
 
 
 def create_app(config=None, testing=False, cli=False):
@@ -13,6 +14,7 @@ def create_app(config=None, testing=False, cli=False):
     configure_app(app, testing)
     configure_extensions(app, cli)
     register_blueprints(app)
+    cors = CORS(app, resources={r"/api/v1*": {"origins": "*"}}, expose_headers=['Location'])
 
     return app
 
